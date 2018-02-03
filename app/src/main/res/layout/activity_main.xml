@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    tools:context="reduce.project.yaerei.ledhyoji.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#fff1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-2dp"
+            tools:layout_width="match_parent">
+
+            <ImageView
+                android:id="@+id/traintype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outofservice" />
+
+            <ImageView
+                android:id="@+id/ikisaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="ikisakimethod"
+            android:textSize="25dp"
+            android:text="英語/日本語　切り替え表示" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:onClick="limitedexpress"
+                        android:text="特急"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_orange_dark"
+                        android:onClick="semilimitedexpress"
+                        android:text="準特急"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_green_light"
+                        android:onClick="express"
+                        android:text="急行"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="#ffff"
+                        android:onClick="semiexpress"
+                        android:text="区間急行"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/button14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="#FF0000FF"
+                        android:onClick="rapid"
+                        android:text="快速"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:onClick="local"
+                        android:text="各駅停車"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/button6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_blue_bright"
+                        android:onClick="extra"
+                        android:text="臨時"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_blue_bright"
+                        android:onClick="testrun"
+                        android:text="試運転"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_blue_bright"
+                        android:onClick="outofsevice"
+                        android:text="回送"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_green_light"
+                        android:onClick="expressintoeishinjuku"
+                        android:text="都営地下鉄新宿線内\n急行" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:onClick="localintoeishinjuku"
+                        android:text="都営新宿線内\n各駅停車"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:onClick="localfromshinjuku"
+                        android:text="新線新宿から\n各駅停車" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:onClick="localfromtakahatafudo"
+                        android:text="高幡不動から\n各駅停車"/>
+
+                    <Button
+                        android:id="@+id/button20"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_orange_dark"
+                        android:onClick="semilimitedexpressfromkitano"
+                        android:text="北野から準特急"
+                        android:textSize="15dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:onClick="limitedexpressfromkitano"
+                        android:text="北野から特急"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:onClick="viathekeioline"
+                        android:text="京王線直通"
+                        android:textSize="25dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:onClick="viathetoeishinjukuline"
+                        android:text="都営新宿線直通"
+                        android:textSize="15dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_orange_dark"
+                        android:onClick="semilimitedexpressfromtakahatafudo"
+                        android:text="高幡不動から\n準特急"
+                        android:textSize="20dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:onClick="limitedexpressfromtakahatafudo"
+                        android:text="高幡不動から\n特急"
+                        android:textSize="20dp"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:onClick="newlineshinjuku"
+                        android:text="(新線)新宿"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="岩本町"
+                        android:onClick="iwamotocho"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="瑞江"
+                        android:onClick="mizue"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="大島"
+                        android:onClick="ojima"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="本八幡"
+                        android:onClick="motoyawata"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="(京王線)新宿"
+                        android:onClick="shinjuku"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="笹塚"
+                        android:onClick="sasazuka"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:onClick="sakurajosui"
+                        android:text="桜上水"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="八幡山"
+                        android:onClick="hachimanyama"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/buttontobitakyu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:onClick="tobitakyu"
+                        android:text="飛田給"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/buttonminamiosawa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:onClick="minamiosawa"
+                        android:text="南大沢"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="つつじヶ丘"
+                        android:onClick="tsutsujigaoka"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="調布"
+                        android:onClick="chofu"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="府中"
+                        android:onClick="fuchu"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="高幡不動"
+                        android:onClick="takahatafudo"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="北野"
+                        android:onClick="kitano"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="京王八王子"
+                        android:onClick="keiohachioji"
+                        android:textSize="20dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="京王稲田堤"
+                        android:textSize="20dp"
+                        android:onClick="keioinadazutsumi"/>
+
+                    <Button
+                        android:id="@+id/button9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:onClick="keiotamacenter"
+                        android:text="京王多摩センター"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="若葉台"
+                        android:onClick="wakabadai"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="橋本"
+                        android:onClick="hashimoto"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/buttonmeidaimae"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:onClick="meidaimae"
+                        android:text="明大前"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="府中競馬正門前"
+                        android:textSize="15dp"
+                        android:onClick="fuchukeibaseimonmae"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="多摩動物公園"
+                        android:textSize="20dp"
+                        android:onClick="tamadobutukoen"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="高尾"
+                        android:onClick="takao"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="高尾山口"
+                        android:onClick="takaosanguchi"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="♨高尾山口♨"
+                        android:onClick="takaosanguchionsen"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="渋谷"
+                        android:onClick="shibuya"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="永福町"
+                        android:onClick="eifukucho"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="富士見ヶ丘"
+                        android:onClick="fujimigaoka"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:text="吉祥寺"
+                        android:onClick="kichijoji"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/buttonhigashihuchu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/darker_gray"
+                        android:onClick="higashifuchu"
+                        android:text="東府中"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
