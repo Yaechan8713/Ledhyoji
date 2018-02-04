@@ -54,6 +54,14 @@
             android:textSize="25dp"
             android:text="英語/日本語　切り替え表示" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SNS用"
+            android:onClick="sns"
+            android:background="@color/colorPrimary"
+            android:textSize="25dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -44,6 +44,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void snssend(int a,int b,int c,int d){
+
+        intent = new Intent(this,snsActivity.class);
+        intent.putExtra("traintypenum",a);
+        intent.putExtra("notraintype",b);
+        intent.putExtra("noikisaki",c);
+        intent.putExtra("ikisakinum",d);
+        startActivity(intent);
+
+    }
+
+    public void sns(View v){
+        snssend(traintypenum,notraintype,noikisaki,ikisakinum);
+
+        finish();
+    }
+
     public void hyoji(){
         if(notraintype == 1){
 
