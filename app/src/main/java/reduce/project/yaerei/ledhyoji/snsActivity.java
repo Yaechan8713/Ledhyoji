@@ -19,7 +19,7 @@ public class snsActivity extends AppCompatActivity {
     int traintypenum,notraintype,noikisaki,ikisakinum;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.snspicture_main);
 
@@ -33,25 +33,23 @@ public class snsActivity extends AppCompatActivity {
         ikisakinum = intent.getIntExtra("ikisakinum",0);
 
         if(notraintype == 1){
-            typeimage.setImageResource(traintypenum);
 
             imageview.setImageDrawable(null);
 
-            if(noikisaki == 0){
-                new AlertDialog.Builder(snsActivity.this)
-                        .setTitle("エラー")
-                        .setMessage("列車別を選択してください。")
-                        .setPositiveButton(
-                                R.string.ryoukai,
+            new AlertDialog.Builder(snsActivity.this)
+                    .setTitle("エラー")
+                    .setMessage("列車別が選択されていないため、「回送」表示します。")
+                    .setPositiveButton(
+                            R.string.ryoukai,
 
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-                                        noikisaki = 1;
-                                    }
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    typeimage.setImageResource(R.drawable.outofservice);
                                 }
-                        ).show();
-            }
+                            }
+                    ).show();
+
         }else if(notraintype == 0){
             typeimage.setImageResource(traintypenum);
 

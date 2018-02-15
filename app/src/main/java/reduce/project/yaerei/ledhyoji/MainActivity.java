@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void sns(View v){
         snssend(traintypenum,notraintype,noikisaki,ikisakinum);
-
-        finish();
     }
 
     public void hyoji(){
@@ -70,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
             if(noikisaki == 0){
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("エラー")
-                        .setMessage("列車別を選択してください。")
+                        .setTitle(R.string.error)
+                        .setMessage(R.string.choicefrom)
                         .setPositiveButton(
                                 R.string.ryoukai,
 
@@ -203,13 +201,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
-
-
-
-
-
-
 
 
     public void noikisakimethod(){

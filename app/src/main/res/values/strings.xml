@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Ledhyoji</string>
     <string name="ikisaki">LEDシュミレーター　京王電鉄ver</string>
+    <string name="error">エラー</string>
+    <string name="choicefrom">列車別を選択してください。</string>
     <string name="ryoukai">了解</string>
 </resources>
