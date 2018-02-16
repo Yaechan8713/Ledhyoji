@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ikisakimethod(View v){
-        intent = new Intent(this,ikisakiclass.class);
+        intent = new Intent(this,ikisakiActivity.class);
         startActivity(intent);
         finish();
     }

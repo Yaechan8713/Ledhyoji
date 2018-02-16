@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ikisakiclass"/>
+        <activity android:name=".ikisakiActivity"/>
         <activity android:name=".snsActivity"/>
 
     </application>
