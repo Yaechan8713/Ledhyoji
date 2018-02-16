@@ -36,19 +36,25 @@ public class snsActivity extends AppCompatActivity {
 
             imageview.setImageDrawable(null);
 
-            new AlertDialog.Builder(snsActivity.this)
-                    .setTitle("エラー")
-                    .setMessage("列車別が選択されていないため、「回送」表示します。")
-                    .setPositiveButton(
-                            R.string.ryoukai,
+            if(noikisaki == 0) {
 
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    typeimage.setImageResource(R.drawable.outofservice);
+                new AlertDialog.Builder(snsActivity.this)
+                        .setTitle("エラー")
+                        .setMessage("列車別が選択されていないため、「回送」表示します。")
+                        .setPositiveButton(
+                                R.string.ryoukai,
+
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        traintypenum = R.drawable.outofservice;
+                                    }
                                 }
-                            }
-                    ).show();
+                        ).show();
+            }
+
+            typeimage.setImageResource(traintypenum);
+
 
         }else if(notraintype == 0){
             typeimage.setImageResource(traintypenum);
