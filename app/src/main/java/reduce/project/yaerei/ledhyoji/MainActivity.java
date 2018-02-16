@@ -56,7 +56,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sns(View v){
-        snssend(traintypenum,notraintype,noikisaki,ikisakinum);
+
+        if(noikisaki == 0){
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle(R.string.error)
+                    .setMessage(R.string.choicefrom)
+                    .setPositiveButton(
+                            R.string.ryoukai,
+
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    noikisaki = 1;
+                                }
+                            }
+                    ).show();
+        }else{
+            snssend(traintypenum,notraintype,noikisaki,ikisakinum);
+        }
     }
 
     public void hyoji(){
