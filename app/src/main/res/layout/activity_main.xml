@@ -46,6 +46,8 @@
             android:layout_height="wrap_content"
             android:textSize="10dp"/>
 
+
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,13 +56,16 @@
             android:textSize="25dp"
             android:text="英語/日本語　切り替え表示" />
 
+
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SNS用"
+            android:background="#FF1EFF00"
             android:onClick="sns"
-            android:background="@color/colorPrimary"
-            android:textSize="25dp"/>
+            android:text="SNS用"
+            android:textColor="@android:color/black"
+            android:textSize="25dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -127,7 +132,31 @@
                         android:onClick="semiexpress"
                         android:text="区間急行"
                         android:textColor="@android:color/holo_green_dark"
-                        android:textSize="20dp" />
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button143"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:onClick="commuterexpress"
+                        android:text="通勤急行"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/button142"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_blue_bright"
+                        android:onClick="commuterrapid"
+                        android:text="通勤快速"
+                        android:textColor="@android:color/black"
+                        android:textSize="25dp" />
 
                     <Button
                         android:id="@+id/button14"

@@ -68,30 +68,86 @@ public class MainActivity extends AppCompatActivity {
 
             if(noikisaki == 0){
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle(R.string.error)
-                        .setMessage(R.string.choicefrom)
-                        .setPositiveButton(
-                                R.string.ryoukai,
+                        .setTitle(R.string.choicefrom)
+                        .setSingleChoiceItems(
+                                new CharSequence[]{
+                                        "特急",//0
+                                        "準特急",//1
+                                        "急行",//2
+                                        "区間急行",//3
+                                        "通勤急行",//4
+                                        "通勤快速",//5
+                                        "快速",//6
+                                        "各駅停車"//7
+                                }, -1,
 
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
-                                        noikisaki = 1;
+                                        switch (i){
+                                            case 0:
+                                                traintypenum = R.drawable.limitedexpress;
+                                                break;
+
+                                            case 1:
+                                                traintypenum = R.drawable.semilimitedexpress;
+                                                break;
+
+                                            case 2:
+                                                traintypenum = R.drawable.express;
+                                                break;
+
+                                            case 3:
+                                                traintypenum = R.drawable.semiexpress;
+                                                break;
+
+                                            case 4:
+                                                traintypenum = R.drawable.comuterexpress;
+                                                break;
+
+                                            case 5:
+                                                traintypenum = R.drawable.comuterrapid;
+                                                break;
+
+                                            case 6:
+                                                traintypenum = R.drawable.rapid;
+                                                break;
+
+                                            case 7:
+                                                traintypenum = R.drawable.local;
+                                                break;
+                                        }
                                     }
                                 }
-                        ).show();
+                        ).setPositiveButton(
+                        R.string.choice,
+
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                traintype.setImageResource(traintypenum);
+                                ikisaki.setImageResource(ikisakinum);
+                                notraintype = 0;
+
+                            }
+                        }
+                ).show();
             }
 
-        }else if(notraintype == 0){
+        }else if(notraintype == 0) {
 
             traintype.setImageResource(traintypenum);
 
-            if(noikisaki == 1){
+            if (noikisaki == 1) {
                 ikisakinum = R.drawable.noikisaki;
             }
             ikisaki.setImageResource(ikisakinum);
-
         }
+
+
+
+
 
     }
 
@@ -110,6 +166,18 @@ public class MainActivity extends AppCompatActivity {
     public void express(View v){
         notraintype = 0;
         traintypenum = R.drawable.express;
+        hyoji();
+    }
+
+    public void commuterexpress(View v){
+        notraintype = 0;
+        traintypenum = R.drawable.comuterexpress;
+        hyoji();
+    }
+
+    public void commuterrapid(View v){
+        notraintype = 0;
+        traintypenum = R.drawable.comuterrapid;
         hyoji();
     }
 

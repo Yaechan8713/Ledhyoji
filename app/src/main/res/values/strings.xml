@@ -5,4 +5,6 @@
     <string name="choicefrom">列車別を選択してください。</string>
     <string name="ryoukai">了解</string>
     <string name="cancel">キャンセル</string>
+    <string name="settei">設定する</string>
+    <string name="choice">選択</string>
 </resources>

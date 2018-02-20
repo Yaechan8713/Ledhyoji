@@ -76,6 +76,14 @@
                 android:textColor="@android:color/background_light"
                 android:textSize="25dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="秒"
+                android:textColor="@android:color/white"
+                android:textSize="25dp" />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
