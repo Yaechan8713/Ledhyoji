@@ -27,8 +27,6 @@ public class ikisakiActivity extends AppCompatActivity {
 
     int inputtypejapanese, inputtypeenglish;
 
-//    private CountUPTimertask timerTask;
-
     int num, noikisakinum,k,tc;
 
     int traintypenum,trainfromnum;
@@ -406,10 +404,10 @@ public class ikisakiActivity extends AppCompatActivity {
                     i = englishtypetrain;
                 }
 
-                if(i == 0){
-                    if(k == 0) {
+                if (i == 0) {
+                    if (k == 0) {
                         i = R.drawable.outofservicejapanese;
-                    }else{
+                    } else {
                         i = R.drawable.outofserviceenglish;
                     }
                 }
@@ -429,23 +427,17 @@ public class ikisakiActivity extends AppCompatActivity {
                     }
                 }
 
-                train(i,it);
+
+                train(i, it);
 
 //                10秒間をカウントする処理
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        int ke;
-                        ke = 0;
-                    }
-                },5*1000);
+
+
+                if (t == 9) {
+                    t = 0;
+                }
 
             }
-
-            if (t == 9) {
-                t = 0;
-            }
-
         }
 
     }
@@ -463,20 +455,6 @@ public class ikisakiActivity extends AppCompatActivity {
         trainfromnum = b;
     }
 
-    /*class CountUPTimertask extends TimerTask {
 
-        @Override
-        public void run(){
-
-            //時間のカウントコード
-            if(k == 0){
-                k = 1;
-            }else{
-                k = 0;
-            }
-
-        }
-
-    }*/
 
 }
